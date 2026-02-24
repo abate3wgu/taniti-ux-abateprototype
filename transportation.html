@@ -3,6 +3,136 @@
 <head>
     <title>Transportation - Taniti Island</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 30px;
+            background-color: #e8f9f1;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #2a9d8f;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Transportation in Taniti</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="lodging.html">Lodging</a>
+            <a href="transportation.html">Transportation</a>
+            <a href="faq.html">Travel Info</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Easy Ways to Travel Around the Island</h2>
+        <p>Taniti offers multiple transportation options for convenient and safe travel.</p>
+    </section>
+
+    <main class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502920917128-1aa500764b7c" alt="Airport">
+            <div class="card-content">
+                <h3>Airport Access</h3>
+                <p>
+                    Most visitors arrive by air through Taniti’s airport, which accommodates 
+                    small jets and propeller planes. Expansion is planned for larger aircraft.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957" alt="Public Bus">
+            <div class="card-content">
+                <h3>Public Buses</h3>
+                <p>
+                    Public buses operate daily from 5 a.m. to 11 p.m. in Taniti City,
+                    making it affordable and accessible for tourists.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4" alt="Taxi">
+            <div class="card-content">
+                <h3>Taxis</h3>
+                <p>
+                    Taxis are widely available in Taniti City and provide convenient
+                    transportation to major tourist attractions.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def" alt="Rental Car">
+            <div class="card-content">
+                <h3>Rental Cars</h3>
+                <p>
+                    Rental cars are available near the airport for visitors who want
+                    to explore the island independently.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1508973378895-527ef22e9d7e" alt="Biking">
+            <div class="card-content">
+                <h3>Bikes & Walking</h3>
+                <p>
+                    Taniti City is flat and walkable. Bikes and helmets are available
+                    for rent, and helmets are required by law.
+                </p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Transportation - Taniti Island</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -26,4 +156,4 @@
         </ul>
     </main>
 </body>
-</html>
+</html> -->
