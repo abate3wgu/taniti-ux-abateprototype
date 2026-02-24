@@ -3,6 +3,151 @@
 <head>
     <title>Attractions - Taniti Island</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 30px;
+            background-color: #e6f7ff;
+        }
+
+        .hero h2 {
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #0077b6;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Explore Attractions in Taniti</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="lodging.html">Lodging</a>
+            <a href="transportation.html">Transportation</a>
+            <a href="faq.html">Travel Info</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Discover Activities & Adventures</h2>
+        <p>From beaches and rainforests to cultural experiences, Taniti offers something for every traveler.</p>
+    </section>
+
+    <!-- Attractions Grid -->
+    <main class="grid">
+
+        <!-- Beaches -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Taniti Beaches">
+            <div class="card-content">
+                <h3>Beaches & Snorkeling</h3>
+                <p>Relax on white sandy beaches around Yellow Leaf Bay and enjoy snorkeling in crystal-clear waters.</p>
+            </div>
+        </div>
+
+        <!-- Rainforest -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Rainforest">
+            <div class="card-content">
+                <h3>Rainforest Hiking & Zip-lining</h3>
+                <p>Explore lush tropical rainforests through guided hikes and thrilling zip-lining adventures.</p>
+            </div>
+        </div>
+
+        <!-- Volcano -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1587502537745-84f1e90b4c73" alt="Volcano">
+            <div class="card-content">
+                <h3>Active Volcano Tours</h3>
+                <p>Visit Taniti’s mountainous interior and safely experience views of the island’s active volcano.</p>
+            </div>
+        </div>
+
+        <!-- Museum -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1554907984-15263bfd63bd" alt="Museum">
+            <div class="card-content">
+                <h3>Local History Museum</h3>
+                <p>Learn about Taniti’s indigenous culture, history, and traditions at the island’s museum.</p>
+            </div>
+        </div>
+
+        <!-- Fishing Tours -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c" alt="Fishing Tours">
+            <div class="card-content">
+                <h3>Fishing & Boat Tours</h3>
+                <p>Enjoy chartered fishing tours, sightseeing cruises, and island boat excursions.</p>
+            </div>
+        </div>
+
+        <!-- Entertainment -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4" alt="Entertainment">
+            <div class="card-content">
+                <h3>Entertainment & Nightlife</h3>
+                <p>Visit pubs, a microbrewery, dance club, arcade, art galleries, and a movie theater in Merriton Landing.</p>
+            </div>
+        </div>
+
+        <!-- Golf -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505842465776-3ac31f5e4f8b" alt="Golf Course">
+            <div class="card-content">
+                <h3>Golf Course (Coming Soon)</h3>
+                <p>Play at the new nine-hole golf course being developed near Merriton Landing.</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Attractions - Taniti Island</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -26,4 +171,4 @@
         </ul>
     </main>
 </body>
-</html>
+</html> -->
