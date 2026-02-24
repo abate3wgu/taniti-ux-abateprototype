@@ -3,6 +3,159 @@
 <head>
     <title>Lodging - Taniti Island</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero {
+            text-align: center;
+            padding: 30px;
+            background-color: #f0f8ff;
+        }
+
+        .hero h2 {
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #0077b6;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #2a9d8f;
+            margin: 8px 0;
+        }
+
+        .features {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lodging Options in Taniti</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="lodging.html">Lodging</a>
+            <a href="transportation.html">Transportation</a>
+            <a href="faq.html">Travel Info</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Find the Perfect Place to Stay</h2>
+        <p>From budget hostels to luxury resorts, Taniti offers safe and government-regulated lodging for every traveler.</p>
+    </section>
+
+    <!-- Lodging Grid -->
+    <main class="grid">
+
+        <!-- Resort -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d" alt="Resort">
+            <div class="card-content">
+                <h3>Luxury Beach Resort</h3>
+                <p class="price">$$$$</p>
+                <p class="features">
+                    Enjoy oceanfront views, pools, fine dining, and premium amenities.
+                    Ideal for honeymoon travelers and luxury vacations.
+                </p>
+            </div>
+        </div>
+
+        <!-- Family Hotels -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" alt="Hotel">
+            <div class="card-content">
+                <h3>Family-Owned Hotels</h3>
+                <p class="price">$$$</p>
+                <p class="features">
+                    Comfortable and affordable hotels located near Taniti City and Yellow Leaf Bay.
+                    Great for families and first-time visitors.
+                </p>
+            </div>
+        </div>
+
+        <!-- Bed and Breakfast -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511" alt="Bed and Breakfast">
+            <div class="card-content">
+                <h3>Bed & Breakfasts</h3>
+                <p class="price">$$</p>
+                <p class="features">
+                    Cozy and locally owned B&Bs offering a cultural and personalized experience.
+                    Perfect for relaxed, scenic stays.
+                </p>
+            </div>
+        </div>
+
+        <!-- Hostel -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5" alt="Hostel">
+            <div class="card-content">
+                <h3>Budget Hostel</h3>
+                <p class="price">$</p>
+                <p class="features">
+                    Affordable lodging for budget travelers and backpackers.
+                    Safe, inspected, and located near major attractions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Merriton Landing Area -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2" alt="Coastal Lodging">
+            <div class="card-content">
+                <h3>Merriton Landing Lodging</h3>
+                <p class="price">$$–$$$</p>
+                <p class="features">
+                    Stay in the rapidly developing tourist district with easy access
+                    to entertainment, beaches, and attractions.
+                </p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Lodging - Taniti Island</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -25,4 +178,4 @@
         </ul>
     </main>
 </body>
-</html>
+</html> -->
