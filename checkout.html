@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reservations | Taniti Island</title>
+  <title>Checkout | Taniti Island</title>
   <style>
     * {
       box-sizing: border-box;
@@ -75,52 +75,13 @@
       font-size: 1.05rem;
     }
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 28px;
-      color: #0f4c5c;
-      font-size: 2rem;
-    }
-
     main {
       max-width: 1100px;
       margin: 0 auto;
       padding: 40px 20px 60px;
     }
 
-    .experience-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
-      margin-bottom: 40px;
-    }
-
-    .card,
-    .panel {
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    }
-
-    .card img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-content {
-      padding: 18px;
-    }
-
-    .card h3,
-    .panel h3 {
-      margin-top: 0;
-      color: #0f4c5c;
-    }
-
-    .reservation-layout {
+    .checkout-layout {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 28px;
@@ -128,7 +89,24 @@
     }
 
     .panel {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
       padding: 24px;
+    }
+
+    .panel h3 {
+      margin-top: 0;
+      color: #0f4c5c;
+    }
+
+    .checkout-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 18px;
     }
 
     .details-list {
@@ -146,35 +124,19 @@
       border-bottom: none;
     }
 
-    form {
-      display: grid;
-      gap: 14px;
-    }
-
-    label {
-      font-weight: bold;
-      margin-bottom: 4px;
-      display: block;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #cbd5e1;
+    .price-box {
+      margin-top: 20px;
+      padding: 18px;
+      background: #eef8fb;
+      border-left: 5px solid #0f4c5c;
       border-radius: 8px;
-      font-size: 1rem;
-      background-color: #fff;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #0f4c5c;
     }
 
     .btn,
-    .submit-btn {
+    .pay-btn {
       display: inline-block;
       text-align: center;
       background-color: #ffb703;
@@ -184,13 +146,11 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 1rem;
-      border: none;
-      cursor: pointer;
       transition: 0.2s ease;
     }
 
     .btn:hover,
-    .submit-btn:hover {
+    .pay-btn:hover {
       background-color: #f4a000;
     }
 
@@ -211,7 +171,13 @@
       background-color: #0c3d49;
     }
 
-    .notice-box,
+    .payment-buttons {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .note-box,
     .info-box {
       margin-top: 18px;
       background: #eef8fb;
@@ -236,7 +202,7 @@
     }
 
     @media (max-width: 850px) {
-      .reservation-layout {
+      .checkout-layout {
         grid-template-columns: 1fr;
       }
 
@@ -255,131 +221,77 @@
       <a href="lodging.html">Lodging</a>
       <a href="transportation.html">Transportation</a>
       <a href="travel-info.html">Travel Info</a>
-      <a href="reservation.html" class="active">Reservations</a>
-      <a href="checkout.html">Checkout</a>
+      <a href="reservation.html">Reservations</a>
+      <a href="checkout.html" class="active">Checkout</a>
     </nav>
   </header>
 
   <section class="hero">
     <div class="hero-content">
-      <h2>Reserve Your Taniti Island Experience</h2>
+      <h2>Complete Your Reservation Payment</h2>
       <p>
-        Book unforgettable island adventures, cultural experiences, and family-friendly activities.
+        Finish your Taniti Island booking with a quick and secure checkout.
       </p>
     </div>
   </section>
 
   <main>
-    <section>
-      <h2 class="section-title">Popular Experiences</h2>
-
-      <div class="experience-grid">
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
-            alt="Rainforest tour"
-          />
-          <div class="card-content">
-            <h3>Rainforest Adventure Tour</h3>
-            <p>Explore lush trails and enjoy the beauty of Taniti’s tropical landscape.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80"
-            alt="Snorkeling excursion"
-          />
-          <div class="card-content">
-            <h3>Beach & Snorkeling Excursion</h3>
-            <p>Relax by the shore and enjoy crystal-clear water with unforgettable coastal views.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img
-            src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1200&q=80"
-            alt="Sunset boat ride"
-          />
-          <div class="card-content">
-            <h3>Sunset Boat Experience</h3>
-            <p>Enjoy calm waters and panoramic island views during a relaxing evening cruise.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="reservation-layout">
+    <section class="checkout-layout">
       <div class="panel">
-        <h3>Reservation Information</h3>
+        <img
+          class="checkout-image"
+          src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80"
+          alt="Taniti Island beach"
+        />
+
+        <h3>Reservation Summary</h3>
         <ul class="details-list">
-          <li><strong>Reservation Type:</strong> Tours, excursions, and island events</li>
-          <li><strong>Advance Booking:</strong> Recommended at least 48 hours ahead</li>
-          <li><strong>Group Size:</strong> 1 to 12 guests</li>
-          <li><strong>Confirmation:</strong> Final confirmation sent by email or phone</li>
-          <li><strong>Deposit:</strong> Reservation deposit due at checkout</li>
+          <li><strong>Experience:</strong> Taniti Island Reservation</li>
+          <li><strong>Type:</strong> Tour / Event / Activity Booking</li>
+          <li><strong>Confirmation:</strong> Sent after successful payment</li>
+          <li><strong>Location:</strong> Taniti Island Visitor Services</li>
+          <li><strong>Status:</strong> Awaiting deposit payment</li>
         </ul>
 
-        <div class="notice-box">
-          Complete the reservation form, then continue to checkout to submit your deposit.
+        <div class="price-box">
+          Reservation Deposit: $19.99
         </div>
 
         <div class="action-row">
-          <a href="checkout.html" class="secondary-btn">Go to Checkout</a>
+          <a href="reservation.html" class="secondary-btn">Back to Reservation</a>
         </div>
       </div>
 
       <div class="panel">
-        <h3>Reservation Request Form</h3>
+        <h3>Choose Your Payment Method</h3>
+        <p>
+          Select one of the payment options below to complete your reservation deposit.
+        </p>
 
-        <form>
-          <div>
-            <label for="fullname">Full Name</label>
-            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" />
-          </div>
+        <div class="payment-buttons">
+          <a
+            class="pay-btn"
+            href="https://buy.stripe.com/YOUR-LINK-HERE"
+            target="_blank"
+          >
+            Pay with Stripe
+          </a>
 
-          <div>
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email address" />
-          </div>
+          <a
+            class="secondary-btn"
+            href="https://www.paypal.com/ncp/payment/YOUR-LINK-HERE"
+            target="_blank"
+          >
+            Pay with PayPal
+          </a>
+        </div>
 
-          <div>
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
-          </div>
-
-          <div>
-            <label for="experience">Select Experience</label>
-            <select id="experience" name="experience">
-              <option value="">Choose an experience</option>
-              <option>Rainforest Adventure Tour</option>
-              <option>Beach & Snorkeling Excursion</option>
-              <option>Sunset Boat Experience</option>
-              <option>Volcano Scenic Tour</option>
-              <option>Cultural Island Event</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="date">Preferred Date</label>
-            <input type="date" id="date" name="date" />
-          </div>
-
-          <div>
-            <label for="guests">Number of Guests</label>
-            <input type="number" id="guests" name="guests" min="1" max="12" placeholder="Enter number of guests" />
-          </div>
-
-          <div>
-            <label for="notes">Special Requests</label>
-            <textarea id="notes" name="notes" placeholder="Add any special requests or questions"></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Submit Reservation Request</button>
-        </form>
+        <div class="note-box">
+          Replace the placeholder payment links with your real Stripe and PayPal checkout links.
+        </div>
 
         <div class="info-box">
-          After submitting this form, continue to the checkout page to complete your reservation deposit.
+          After payment, you can return to the reservation page to review your booking details.
         </div>
       </div>
     </section>
