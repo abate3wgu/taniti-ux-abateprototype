@@ -1,176 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Taniti Island Tourism</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .hero {
-            text-align: center;
-            padding: 30px;
-        }
-
-        .hero img {
-            width: 90%;
-            max-height: 350px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .attractions {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .card-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            width: 250px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-            padding: 15px;
-        }
-
-        .card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .card h3 {
-            margin: 10px 0 5px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taniti Island Tourism</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <nav>
-     <header>
-    <h1>Welcome to Taniti Island</h1>
-    <nav>
-        
-  <a href="index.html">Home</a>
-  <a href="attractions.html">Attractions</a>
-  <a href="lodging.html">Lodging</a>
-  <a href="transportation.html">Transportation</a>
-  <a href="travel-info.html">Travel Info</a>
-  <a href="reservation.html">Bookings-Reservations</a>
-  <a href="checkout.html">Checkout</a>
-    </nav>
-     </header>
-    </nav>
-    <!-- <header>
-        <h1>Welcome to Taniti Island</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="attractions.html">Attractions</a>
-            <a href="lodging.html">Lodging</a>
-            <a href="transportation.html">Transportation</a>
-            <a href="faq.html">Travel Info</a>
-        </nav>
-    </header> -->
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <h2>Plan Your Perfect Island Vacation</h2>
-            <p>Discover beaches, rainforest adventures, and cultural experiences on Taniti Island.</p>
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Taniti Island Beach">
-            <br><br>
-            <button onclick="location.href='attractions.html'">Explore Attractions</button>
-        </section>
+  <header class="site-header">
+    <div class="header-wrap">
+      <h1 class="site-title">Taniti Island</h1>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="faq.html">Travel Info</a>
+        <a href="reservation.html">Reservations</a>
+        <a href="checkout.html">Checkout</a>
+      </nav>
+    </div>
+  </header>
 
-        <!-- Featured Attractions -->
-        <section class="attractions">
-            <h2>Top Attractions in Taniti</h2>
-            <div class="card-container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Taniti Island</h1>
+      <p>
+        Plan your perfect island vacation with scenic beaches, tropical adventures,
+        comfortable lodging, and easy travel planning.
+      </p>
+      <div class="button-row" style="justify-content:center;">
+        <a href="attractions.html" class="btn">Explore Attractions</a>
+        <a href="reservation.html" class="btn-secondary">Book Your Trip</a>
+      </div>
+    </div>
+  </section>
 
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Rainforest">
-                    <h3>Rainforest Adventures</h3>
-                    <p>Explore lush tropical rainforests with hiking and zip-lining tours.</p>
-                </div>
+  <main class="container">
+    <section>
+      <h2 class="section-title">Plan Your Perfect Island Vacation</h2>
+      <p class="section-intro">
+        Discover beaches, rainforest adventures, cultural experiences, and relaxing stays across Taniti Island.
+      </p>
 
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21" alt="Beach">
-                    <h3>Beaches & Snorkeling</h3>
-                    <p>Relax on white sandy beaches and enjoy snorkeling in clear waters.</p>
-                </div>
+      <div class="grid-auto">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="Taniti beach" />
+          <div class="card-body">
+            <h3>Beaches & Snorkeling</h3>
+            <p>Relax on beautiful sandy beaches and explore crystal-clear coastal waters.</p>
+          </div>
+        </article>
 
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1663640397122-d50df280b1db?q" alt="Volcano">
-                    
-                    <h3>Active Volcano Tours</h3>
-                    <p>Visit Taniti’s famous active volcano and scenic mountain views.</p>
-                </div>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80" alt="Taniti rainforest" />
+          <div class="card-body">
+            <h3>Rainforest Adventures</h3>
+            <p>Hike lush tropical trails and experience unforgettable nature excursions.</p>
+          </div>
+        </article>
 
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1526779259212-939e64788e3c" alt="Fishing">
-                    <h3>Fishing & Boat Tours</h3>
-                    <p>Enjoy chartered fishing tours and island boat sightseeing trips.</p>
-                </div>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80" alt="Boat tour" />
+          <div class="card-body">
+            <h3>Boat & Fishing Tours</h3>
+            <p>Enjoy sightseeing cruises, chartered fishing trips, and island exploration.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
 
-            </div>
-        </section>
-    </main>
+  <footer class="site-footer">
+    <p>&copy; 2026 Taniti Island Tourism. All rights reserved.</p>
+  </footer>
 </body>
 </html>
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Taniti Island Tourism</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to Taniti Island</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="attractions.html">Attractions</a>
-            <a href="lodging.html">Lodging</a>
-            <a href="transportation.html">Transportation</a>
-            <a href="faq.html">Travel Info</a>
-        </nav>
-    </header>
-
-    <main>
-        <h2>Plan Your Perfect Island Vacation</h2>
-        <p>Discover beaches, rainforest adventures, and cultural experiences on Taniti Island.</p>
-        <button onclick="location.href='attractions.html'">Explore Attractions</button>
-    </main>
-</body>
-</html> -->
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title>Taniti Island Tourism</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to Taniti Island</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="attractions.html">Attractions</a>
-            <a href="lodging.html">Lodging</a>
-            <a href="transportation.html">Transportation</a>
-            <a href="faq.html">Travel Info</a>
-        </nav>
-    </header>
-
-    <main>
-        <h2>Plan Your Perfect Island Vacation</h2>
-        <p>Discover beaches, rainforest adventures, and cultural experiences on Taniti Island.</p>
-        <button onclick="location.href='attractions.html'">Explore Attractions</button>
-    </main>
-</body>
-</html> -->
