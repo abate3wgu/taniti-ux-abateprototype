@@ -4,226 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Checkout | Taniti Island</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: #1f2937;
-      background-color: #f7fbfc;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #0f4c5c;
-      color: white;
-      padding: 20px 24px;
-    }
-
-    header h1 {
-      margin: 0 0 10px;
-      font-size: 2rem;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover,
-    nav a.active {
-      text-decoration: underline;
-    }
-
-    .hero {
-      position: relative;
-      min-height: 360px;
-      background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)),
-        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      padding: 40px 20px;
-    }
-
-    .hero-content {
-      max-width: 780px;
-      background: rgba(0, 0, 0, 0.28);
-      padding: 28px;
-      border-radius: 14px;
-    }
-
-    .hero h2 {
-      margin: 0 0 12px;
-      font-size: 2.3rem;
-    }
-
-    .hero p {
-      margin: 0;
-      font-size: 1.05rem;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
-    }
-
-    .checkout-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .panel {
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-      padding: 24px;
-    }
-
-    .panel h3 {
-      margin-top: 0;
-      color: #0f4c5c;
-    }
-
-    .checkout-image {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 18px;
-    }
-
-    .details-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .details-list li {
-      padding: 12px 0;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .details-list li:last-child {
-      border-bottom: none;
-    }
-
-    .price-box {
-      margin-top: 20px;
-      padding: 18px;
-      background: #eef8fb;
-      border-left: 5px solid #0f4c5c;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: bold;
-      color: #0f4c5c;
-    }
-
-    .btn,
-    .pay-btn {
-      display: inline-block;
-      text-align: center;
-      background-color: #ffb703;
-      color: #1f2937;
-      padding: 14px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: 0.2s ease;
-    }
-
-    .btn:hover,
-    .pay-btn:hover {
-      background-color: #f4a000;
-    }
-
-    .secondary-btn {
-      display: inline-block;
-      text-align: center;
-      background-color: #0f4c5c;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: 0.2s ease;
-    }
-
-    .secondary-btn:hover {
-      background-color: #0c3d49;
-    }
-
-    .payment-buttons {
-      display: grid;
-      gap: 14px;
-      margin-top: 20px;
-    }
-
-    .note-box,
-    .info-box {
-      margin-top: 18px;
-      background: #eef8fb;
-      border-left: 5px solid #0f4c5c;
-      padding: 14px 16px;
-      border-radius: 8px;
-    }
-
-    .action-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 20px;
-    }
-
-    footer {
-      background-color: #0f4c5c;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 850px) {
-      .checkout-layout {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h2 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Taniti Island</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="attractions.html">Attractions</a>
-      <a href="lodging.html">Lodging</a>
-      <a href="transportation.html">Transportation</a>
-      <a href="travel-info.html">Travel Info</a>
-      <a href="reservation.html">Reservations</a>
-      <a href="checkout.html" class="active">Checkout</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-wrap">
+      <h1 class="site-title">Taniti Island</h1>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="attractions.html">Attractions</a>
+        <a href="lodging.html">Lodging</a>
+        <a href="transportation.html">Transportation</a>
+        <a href="faq.html">Travel Info</a>
+        <a href="reservation.html">Reservations</a>
+        <a href="checkout.html" class="active">Checkout</a>
+      </nav>
+    </div>
   </header>
 
   <section class="hero">
@@ -235,17 +31,11 @@
     </div>
   </section>
 
-  <main>
-    <section class="checkout-layout">
+  <main class="container">
+    <section class="grid-2">
       <div class="panel">
-        <img
-          class="checkout-image"
-          src="https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80"
-          alt="Taniti Island beach"
-        />
-
         <h3>Reservation Summary</h3>
-        <ul class="details-list">
+        <ul class="meta-list">
           <li><strong>Experience:</strong> Taniti Island Reservation</li>
           <li><strong>Type:</strong> Tour / Event / Activity Booking</li>
           <li><strong>Confirmation:</strong> Sent after successful payment</li>
@@ -253,37 +43,22 @@
           <li><strong>Status:</strong> Awaiting deposit payment</li>
         </ul>
 
-        <div class="price-box">
+        <div class="notice-box">
           Reservation Deposit: $19.99
         </div>
 
-        <div class="action-row">
-          <a href="reservation.html" class="secondary-btn">Back to Reservation</a>
+        <div class="button-row">
+          <a href="reservation.html" class="btn-secondary">Back to Reservation</a>
         </div>
       </div>
 
       <div class="panel">
         <h3>Choose Your Payment Method</h3>
-        <p>
-          Select one of the payment options below to complete your reservation deposit.
-        </p>
+        <p>Select one of the payment options below to complete your reservation deposit.</p>
 
-        <div class="payment-buttons">
-          <a
-            class="pay-btn"
-            href="https://buy.stripe.com/YOUR-LINK-HERE"
-            target="_blank"
-          >
-            Pay with Stripe
-          </a>
-
-          <a
-            class="secondary-btn"
-            href="https://www.paypal.com/ncp/payment/YOUR-LINK-HERE"
-            target="_blank"
-          >
-            Pay with PayPal
-          </a>
+        <div class="button-row">
+          <a class="btn" href="https://buy.stripe.com/YOUR-LINK-HERE" target="_blank">Pay with Stripe</a>
+          <a class="btn-secondary" href="https://www.paypal.com/ncp/payment/YOUR-LINK-HERE" target="_blank">Pay with PayPal</a>
         </div>
 
         <div class="note-box">
@@ -291,13 +66,13 @@
         </div>
 
         <div class="info-box">
-          After payment, you can return to the reservation page to review your booking details.
+          After payment, guests can return to the reservation page to review their booking details.
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>&copy; 2026 Taniti Island Tourism. All rights reserved.</p>
   </footer>
 </body>
