@@ -40,14 +40,15 @@
       font-weight: bold;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a.active {
       text-decoration: underline;
     }
 
     .hero {
       position: relative;
-      min-height: 420px;
-      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+      min-height: 360px;
+      background: linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.38)),
         url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
       display: flex;
       align-items: center;
@@ -58,40 +59,20 @@
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 780px;
       background: rgba(0, 0, 0, 0.28);
       padding: 28px;
       border-radius: 14px;
     }
 
     .hero h2 {
-      font-size: 2.4rem;
-      margin-bottom: 12px;
+      margin: 0 0 12px;
+      font-size: 2.3rem;
     }
 
     .hero p {
+      margin: 0;
       font-size: 1.05rem;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #ffb703;
-      color: #1f2937;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .btn:hover {
-      background-color: #f4a000;
-    }
-
-    main {
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 40px 20px 60px;
     }
 
     .section-title {
@@ -101,14 +82,21 @@
       font-size: 2rem;
     }
 
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
     .experience-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 24px;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
     }
 
-    .card {
+    .card,
+    .panel {
       background: white;
       border-radius: 14px;
       overflow: hidden;
@@ -126,40 +114,31 @@
       padding: 18px;
     }
 
-    .card h3 {
+    .card h3,
+    .panel h3 {
       margin-top: 0;
       color: #0f4c5c;
     }
 
     .reservation-layout {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1fr 1fr;
       gap: 28px;
       align-items: start;
     }
 
-    .info-panel,
-    .form-panel {
-      background: white;
-      border-radius: 14px;
+    .panel {
       padding: 24px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    }
-
-    .info-panel h3,
-    .form-panel h3 {
-      margin-top: 0;
-      color: #0f4c5c;
     }
 
     .details-list {
       list-style: none;
       padding: 0;
-      margin: 0 0 18px;
+      margin: 0;
     }
 
     .details-list li {
-      padding: 10px 0;
+      padding: 12px 0;
       border-bottom: 1px solid #e5e7eb;
     }
 
@@ -194,33 +173,58 @@
       min-height: 120px;
     }
 
-    .form-note {
-      font-size: 0.95rem;
-      color: #475569;
-      margin-top: 6px;
+    .btn,
+    .submit-btn {
+      display: inline-block;
+      text-align: center;
+      background-color: #ffb703;
+      color: #1f2937;
+      padding: 14px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s ease;
     }
 
-    .submit-btn {
+    .btn:hover,
+    .submit-btn:hover {
+      background-color: #f4a000;
+    }
+
+    .secondary-btn {
+      display: inline-block;
+      text-align: center;
       background-color: #0f4c5c;
       color: white;
-      border: none;
-      padding: 13px 18px;
+      padding: 14px 18px;
       border-radius: 8px;
-      font-size: 1rem;
+      text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.2s ease;
     }
 
-    .submit-btn:hover {
+    .secondary-btn:hover {
       background-color: #0c3d49;
     }
 
-    .notice-box {
+    .notice-box,
+    .info-box {
       margin-top: 18px;
       background: #eef8fb;
       border-left: 5px solid #0f4c5c;
       padding: 14px 16px;
       border-radius: 8px;
+    }
+
+    .action-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     footer {
@@ -251,7 +255,8 @@
       <a href="lodging.html">Lodging</a>
       <a href="transportation.html">Transportation</a>
       <a href="travel-info.html">Travel Info</a>
-      <a href="reservation.html">Reservations</a>
+      <a href="reservation.html" class="active">Reservations</a>
+      <a href="checkout.html">Checkout</a>
     </nav>
   </header>
 
@@ -259,86 +264,72 @@
     <div class="hero-content">
       <h2>Reserve Your Taniti Island Experience</h2>
       <p>
-        Plan your perfect island getaway with guided adventures, cultural events,
-        and family-friendly experiences across Taniti.
+        Book unforgettable island adventures, cultural experiences, and family-friendly activities.
       </p>
-      <a href="#reservation-form" class="btn">Book Your Reservation</a>
     </div>
   </section>
 
   <main>
     <section>
-      <h2 class="section-title">Popular Reservation Experiences</h2>
+      <h2 class="section-title">Popular Experiences</h2>
 
       <div class="experience-grid">
         <div class="card">
           <img
             src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
-            alt="Scenic island adventure experience"
+            alt="Rainforest tour"
           />
           <div class="card-content">
             <h3>Rainforest Adventure Tour</h3>
-            <p>
-              Explore lush trails, enjoy guided nature walks, and discover the
-              beauty of Taniti’s tropical landscape.
-            </p>
+            <p>Explore lush trails and enjoy the beauty of Taniti’s tropical landscape.</p>
           </div>
         </div>
 
         <div class="card">
           <img
             src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80"
-            alt="Ocean waves near Taniti Island"
+            alt="Snorkeling excursion"
           />
           <div class="card-content">
             <h3>Beach & Snorkeling Excursion</h3>
-            <p>
-              Spend the day on clear blue waters with snorkeling, beach relaxation,
-              and unforgettable coastal views.
-            </p>
+            <p>Relax by the shore and enjoy crystal-clear water with unforgettable coastal views.</p>
           </div>
         </div>
 
         <div class="card">
           <img
             src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1200&q=80"
-            alt="Island sunset tour view"
+            alt="Sunset boat ride"
           />
           <div class="card-content">
             <h3>Sunset Boat Experience</h3>
-            <p>
-              Enjoy an evening cruise with panoramic island views, calm waters,
-              and a relaxing sunset atmosphere.
-            </p>
+            <p>Enjoy calm waters and panoramic island views during a relaxing evening cruise.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="reservation-layout" id="reservation-form">
-      <div class="info-panel">
+    <section class="reservation-layout">
+      <div class="panel">
         <h3>Reservation Information</h3>
         <ul class="details-list">
           <li><strong>Reservation Type:</strong> Tours, excursions, and island events</li>
           <li><strong>Advance Booking:</strong> Recommended at least 48 hours ahead</li>
-          <li><strong>Group Size:</strong> 1 to 12 guests per reservation</li>
+          <li><strong>Group Size:</strong> 1 to 12 guests</li>
           <li><strong>Confirmation:</strong> Final confirmation sent by email or phone</li>
-          <li><strong>Availability:</strong> Subject to event schedule and weather conditions</li>
+          <li><strong>Deposit:</strong> Reservation deposit due at checkout</li>
         </ul>
 
-        <p>
-          Use the reservation form to request your preferred date, time, and experience.
-          This is a static request form for your GitHub Pages site, so it shows the full
-          reservation layout and can later be connected to a form service if needed.
-        </p>
-
         <div class="notice-box">
-          <strong>Note:</strong> This page is designed to match your current Taniti style
-          while giving you a clean reservations section that is no longer blank.
+          Complete the reservation form, then continue to checkout to submit your deposit.
+        </div>
+
+        <div class="action-row">
+          <a href="checkout.html" class="secondary-btn">Go to Checkout</a>
         </div>
       </div>
 
-      <div class="form-panel">
+      <div class="panel">
         <h3>Reservation Request Form</h3>
 
         <form>
@@ -386,12 +377,16 @@
 
           <button type="submit" class="submit-btn">Submit Reservation Request</button>
         </form>
+
+        <div class="info-box">
+          After submitting this form, continue to the checkout page to complete your reservation deposit.
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>2026 Taniti Island Tourism. All rights reserved.</p>
+    <p>&copy; 2026 Taniti Island Tourism. All rights reserved.</p>
   </footer>
 </body>
 </html>
