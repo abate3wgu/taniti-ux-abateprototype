@@ -3,90 +3,554 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Event Reservation | Taniti Island</title>
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Calendly inline widget CSS/JS -->
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
+  <title>Reservations | Taniti Island</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+    * {
+      box-sizing: border-box;
     }
 
-    header, main, footer {
-      padding: 20px;
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background-color: #f7fbfc;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #0f4c5c;
+      color: white;
+      padding: 20px 24px;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
     }
 
     nav a {
-      margin-right: 15px;
+      color: white;
       text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .hero {
-      padding: 30px;
-      border-radius: 10px;
+      position: relative;
+      min-height: 420px;
+      background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      background: rgba(0, 0, 0, 0.28);
+      padding: 28px;
+      border-radius: 14px;
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
       margin-bottom: 20px;
     }
 
-    .event-card {
-      max-width: 900px;
-      margin: auto;
+    .btn {
+      display: inline-block;
+      background-color: #ffb703;
+      color: #1f2937;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .reserve-btn {
-      display: inline-block;
-      padding: 12px 20px;
-      margin-top: 15px;
-      text-decoration: none;
+    .btn:hover {
+      background-color: #f4a000;
+    }
+
+    main {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 28px;
+      color: #0f4c5c;
+      font-size: 2rem;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-bottom: 50px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 18px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #0f4c5c;
+    }
+
+    .reservation-layout {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .info-panel,
+    .form-panel {
+      background: white;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .info-panel h3,
+    .form-panel h3 {
+      margin-top: 0;
+      color: #0f4c5c;
+    }
+
+    .details-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px;
+    }
+
+    .details-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .details-list li:last-child {
+      border-bottom: none;
+    }
+
+    form {
+      display: grid;
+      gap: 14px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 1rem;
+      background-color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-note {
+      font-size: 0.95rem;
+      color: #475569;
+      margin-top: 6px;
+    }
+
+    .submit-btn {
+      background-color: #0f4c5c;
+      color: white;
+      border: none;
+      padding: 13px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #0c3d49;
+    }
+
+    .notice-box {
+      margin-top: 18px;
+      background: #eef8fb;
+      border-left: 5px solid #0f4c5c;
+      padding: 14px 16px;
       border-radius: 8px;
     }
 
-    .calendly-inline-widget {
-      min-width: 320px;
-      height: 700px;
-      margin-top: 30px;
+    footer {
+      background-color: #0f4c5c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 850px) {
+      .reservation-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Taniti Island Event Reservation</h1>
+    <h1>Taniti Island</h1>
     <nav>
       <a href="index.html">Home</a>
+      <a href="attractions.html">Attractions</a>
+      <a href="lodging.html">Lodging</a>
+      <a href="transportation.html">Transportation</a>
+      <a href="travel-info.html">Travel Info</a>
       <a href="reservation.html">Reservations</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero event-card">
-      <h2>Reserve Your Spot</h2>
-      <p><strong>Event:</strong> Island Cultural Experience</p>
-      <p><strong>Location:</strong> Taniti Island Community Center</p>
-      <p><strong>Description:</strong> Join us for a guided island event featuring local culture, music, food, and family-friendly activities.</p>
-      <p><strong>Duration:</strong> 2 hours</p>
-      <p><strong>Reservation Required:</strong> Yes</p>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Reserve Your Taniti Island Experience</h2>
+      <p>
+        Plan your perfect island getaway with guided adventures, cultural events,
+        and family-friendly experiences across Taniti.
+      </p>
+      <a href="#reservation-form" class="btn">Book Your Reservation</a>
+    </div>
+  </section>
 
-      <a class="reserve-btn" href="#booking">Book Now</a>
+  <main>
+    <section>
+      <h2 class="section-title">Popular Reservation Experiences</h2>
+
+      <div class="experience-grid">
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80"
+            alt="Scenic island adventure experience"
+          />
+          <div class="card-content">
+            <h3>Rainforest Adventure Tour</h3>
+            <p>
+              Explore lush trails, enjoy guided nature walks, and discover the
+              beauty of Taniti’s tropical landscape.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80"
+            alt="Ocean waves near Taniti Island"
+          />
+          <div class="card-content">
+            <h3>Beach & Snorkeling Excursion</h3>
+            <p>
+              Spend the day on clear blue waters with snorkeling, beach relaxation,
+              and unforgettable coastal views.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1526779259212-939e64788e3c?auto=format&fit=crop&w=1200&q=80"
+            alt="Island sunset tour view"
+          />
+          <div class="card-content">
+            <h3>Sunset Boat Experience</h3>
+            <p>
+              Enjoy an evening cruise with panoramic island views, calm waters,
+              and a relaxing sunset atmosphere.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="booking" class="event-card">
-      <h2>Choose Your Date and Time</h2>
-      <p>Please select an available time below to complete your reservation.</p>
+    <section class="reservation-layout" id="reservation-form">
+      <div class="info-panel">
+        <h3>Reservation Information</h3>
+        <ul class="details-list">
+          <li><strong>Reservation Type:</strong> Tours, excursions, and island events</li>
+          <li><strong>Advance Booking:</strong> Recommended at least 48 hours ahead</li>
+          <li><strong>Group Size:</strong> 1 to 12 guests per reservation</li>
+          <li><strong>Confirmation:</strong> Final confirmation sent by email or phone</li>
+          <li><strong>Availability:</strong> Subject to event schedule and weather conditions</li>
+        </ul>
 
-      <!-- Replace the URL below with your real Calendly booking link -->
-      <div class="calendly-inline-widget"
-           data-url="https://calendly.com/YOUR-USERNAME/YOUR-EVENT"
-           style="min-width:320px;height:700px;">
+        <p>
+          Use the reservation form to request your preferred date, time, and experience.
+          This is a static request form for your GitHub Pages site, so it shows the full
+          reservation layout and can later be connected to a form service if needed.
+        </p>
+
+        <div class="notice-box">
+          <strong>Note:</strong> This page is designed to match your current Taniti style
+          while giving you a clean reservations section that is no longer blank.
+        </div>
+      </div>
+
+      <div class="form-panel">
+        <h3>Reservation Request Form</h3>
+
+        <form>
+          <div>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" />
+          </div>
+
+          <div>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" />
+          </div>
+
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+          </div>
+
+          <div>
+            <label for="experience">Select Experience</label>
+            <select id="experience" name="experience">
+              <option value="">Choose an experience</option>
+              <option>Rainforest Adventure Tour</option>
+              <option>Beach & Snorkeling Excursion</option>
+              <option>Sunset Boat Experience</option>
+              <option>Volcano Scenic Tour</option>
+              <option>Cultural Island Event</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <div>
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="12" placeholder="Enter number of guests" />
+          </div>
+
+          <div>
+            <label for="notes">Special Requests</label>
+            <textarea id="notes" name="notes" placeholder="Add any special requests or questions"></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit Reservation Request</button>
+        </form>
+
+        <p class="form-note">
+          This is currently a static reservation form layout. On GitHub Pages, it will display
+          beautifully, but it will not save submissions until you connect it to a service like
+          Formspree or Google Forms.
+        </p>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 Taniti Island</p>
+    <p>&copy; 2026 Taniti Island Tourism. All rights reserved.</p>
   </footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
