@@ -1,4 +1,262 @@
- {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f7fbfd;
+  color: #1f2933;
+}
+
+a {
+  color: #0b5cab;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  background: linear-gradient(135deg, #0d6e8a, #0a4f66);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+nav a {
+  color: white;
+  padding: 0.55rem 0.8rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+}
+
+.hero {
+  background: linear-gradient(rgba(8, 67, 87, 0.7), rgba(8, 67, 87, 0.7)),
+    url('images/hero-beach.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 4.5rem 1.5rem;
+}
+
+.hero h1,
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+.section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+}
+
+.section h3 {
+  color: #0a4f66;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #f3f9fb;
+  border: 1px solid #d8e8ee;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.card h4 {
+  color: #0a4f66;
+  margin-bottom: 0.5rem;
+}
+
+.feature-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+ul {
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #0b5cab;
+  color: white;
+  padding: 0.75rem 1.1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #094c8f;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: #198754;
+}
+
+.btn-secondary:hover {
+  background-color: #146c43;
+}
+
+.notice {
+  background-color: #fff9db;
+  border-left: 5px solid #f0c419;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.35rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #c9d7df;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.table-summary {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.table-summary th,
+.table-summary td {
+  border: 1px solid #d7e3ea;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.table-summary th {
+  background-color: #eef6fa;
+}
+
+footer {
+  background-color: #0a4f66;
+  color: white;
+  text-align: center;
+  padding: 1.25rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.2rem 0;
+}
+
+@media (max-width: 768px) {
+  .hero h1,
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feature-image {
+    height: 240px;
+  }
+}
+
+
+
+/* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -58,4 +316,4 @@ nav a {
 
 nav a:hover,
 nav a.active {
-}
+} */
