@@ -3,228 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taniti Island | Transportation</title>
+  <title>Amenities | Taniti Island</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
 
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f4f8fb;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(to right, #0077b6, #00b4d8);
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    header h1 {
-      margin-bottom: 8px;
-      font-size: 2.2rem;
-    }
-
-    header p {
-      font-size: 1rem;
-    }
-
-    nav {
-      background-color: #023e8a;
-      padding: 12px 0;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px 12px;
-      border-radius: 6px;
-      transition: background 0.3s ease;
-    }
-
-    nav ul li a:hover,
-    nav ul li a.active {
-      background-color: #0077b6;
-    }
-
-    .hero {
-      background: white;
-      max-width: 1200px;
-      margin: 30px auto 20px;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-      text-align: center;
-    }
-
-    .hero h2 {
-      color: #023e8a;
-      margin-bottom: 12px;
-      font-size: 2rem;
-    }
-
-    .hero p {
-      max-width: 900px;
-      margin: 0 auto;
-      color: #555;
-    }
-
-    .section {
-      max-width: 1200px;
-      margin: 0 auto 40px;
-      padding: 0 20px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #023e8a;
-      font-size: 1.8rem;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
-    }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-content {
-      padding: 18px;
-      text-align: center;
-    }
-
-    .card-content h3 {
-      color: #0077b6;
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .card-content p {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 15px;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #0077b6;
-      color: white;
-      text-decoration: none;
-      padding: 10px 18px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #023e8a;
-    }
-
-    .info-box {
-      background: white;
-      max-width: 1200px;
-      margin: 0 auto 40px;
-      padding: 30px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    }
-
-    .info-box h2 {
-      color: #023e8a;
-      margin-bottom: 15px;
-      text-align: center;
-    }
-
-    .info-box p {
-      margin-bottom: 12px;
-      color: #555;
-    }
-
-    footer {
-      background-color: #023e8a;
-      color: white;
-      text-align: center;
-      padding: 18px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 1000px) {
-      .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .card-grid {
-        grid-template-columns: 1fr;
-      }
-
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      .hero h2 {
-        font-size: 1.5rem;
-      }
-    }
-  </style>
-  
 </head>
 <body>
 
-  <header>
-    <h1>Taniti Island</h1>
-    <p>Discover beauty, adventure, and unforgettable experiences</p>
+    <header class="site-header">
+    <div class="header-wrap">
+      <h1 class="site-title">Taniti Island</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="food.html">Food</a>
+        <a href="amenities.html">Amenities</a>
+        <a href="transportation.html" class ="active">Transportation</a>
+        <a href="lodging.html">Lodging & Hotels</a>
+        <a href ="entertainment.html">Entertainment</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+    </div>
   </header>
 
-  <nav>
+  <!-- <nav>
    <nav>
         <a href="index.html" class="active">Home</a>
         <a href="food.html">Food</a>
         <a href="amenities.html">Amenities</a>
-        <a href="transportation.html">Transportation</a>
+        <a href="transportation.html" class = "active">Transportation</a>
         <a href="lodging.html">Lodging & HotelS</a>
         <a href ="entertainment.html">Entertainment</a>
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Contact</a>
       </nav>
 
-  </nav>
+  </nav> -->
 
   <section class="hero">
     <h2>Transportation Around Taniti</h2>
